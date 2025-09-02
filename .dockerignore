@@ -1,0 +1,9 @@
+.vs
+.git
+*.md
+*.user
+*.log
+bin/
+obj/
+Dockerfile
+docker-compose*
