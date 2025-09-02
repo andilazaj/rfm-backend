@@ -27,6 +27,15 @@ public class Seed
             }
         }
 
+        if (!await db.BookingClasses.AnyAsync())
+        {
+            db.BookingClasses.AddRange(
+                new BookingClass { Name = "Economy" },
+                new BookingClass { Name = "Business" }
+            );
+            await db.SaveChangesAsync();
+        }
+
         var adminEmail = "admin@rfm.com";
         var adminPassword = "Admin123$";
 
