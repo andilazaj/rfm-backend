@@ -15,10 +15,10 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy(name: MyAllowSpecificOrigins, policy =>
     {
-        policy.WithOrigins("http://localhost:4200")   // Angular dev
-              .AllowAnyHeader()
-              .AllowAnyMethod();
-        // No cookies needed if you use Bearer tokens, so no AllowCredentials here.
+        policy
+            .WithOrigins("http://localhost:4200")
+            .AllowAnyHeader()
+            .AllowAnyMethod();
     });
 });
 
@@ -50,17 +50,20 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
+// DB
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("Default") ?? "Data Source=rfm.db"));
 
-builder.Services.AddIdentity<AppUser, AppRole>()
+
+builder.Services
+    .AddIdentity<AppUser, AppRole>()
     .AddEntityFrameworkStores<AppDbContext>()
     .AddDefaultTokenProviders();
 
-// Authorization services
+
 builder.Services.AddAuthorization();
 
-// JWT auth (make JWT the default for APIs)
+
 var jwtKey = builder.Configuration["Jwt:Key"] ?? "dev-secret-key-1234567890";
 var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey));
 
@@ -85,7 +88,7 @@ builder.Services
         };
     });
 
-// If cookies are used anywhere, prevent redirect-to-login for API calls (return 401 instead)
+
 builder.Services.ConfigureApplicationCookie(o =>
 {
     o.Events.OnRedirectToLogin = ctx =>
@@ -106,19 +109,19 @@ var app = builder.Build();
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
-    var seed = new Rfm.Api.Seed();
-    await seed.Run(services);
+    var db = services.GetRequiredService<AppDbContext>();
+    await db.Database.MigrateAsync();
+
+    var seeder = new Rfm.Api.Seed();
+    await seeder.Run(services);
 }
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+
+
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
-
-
 app.UseCors(MyAllowSpecificOrigins);
 app.UseAuthentication();
 app.UseAuthorization();
