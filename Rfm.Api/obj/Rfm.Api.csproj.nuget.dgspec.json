@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\andi\\source\\repos\\RoutFare\\Rfm.Api\\Rfm.Api\\Rfm.Api.csproj": {}
+    "C:\\Users\\andi\\source\\repos\\rfm-backend\\Rfm.Api\\Rfm.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\andi\\source\\repos\\RoutFare\\Rfm.Api\\Rfm.Api\\Rfm.Api.csproj": {
+    "C:\\Users\\andi\\source\\repos\\rfm-backend\\Rfm.Api\\Rfm.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\andi\\source\\repos\\RoutFare\\Rfm.Api\\Rfm.Api\\Rfm.Api.csproj",
+        "projectUniqueName": "C:\\Users\\andi\\source\\repos\\rfm-backend\\Rfm.Api\\Rfm.Api.csproj",
         "projectName": "Rfm.Api",
-        "projectPath": "C:\\Users\\andi\\source\\repos\\RoutFare\\Rfm.Api\\Rfm.Api\\Rfm.Api.csproj",
+        "projectPath": "C:\\Users\\andi\\source\\repos\\rfm-backend\\Rfm.Api\\Rfm.Api.csproj",
         "packagesPath": "C:\\Users\\andi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\andi\\source\\repos\\RoutFare\\Rfm.Api\\Rfm.Api\\obj\\",
+        "outputPath": "C:\\Users\\andi\\source\\repos\\rfm-backend\\Rfm.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

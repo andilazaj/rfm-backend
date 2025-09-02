@@ -1,0 +1,274 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\andi\\source\\repos\\RoutFare\\Rfm.Api\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E3050D9D-7720-4D95-ADE8-ADCC5FE29092}|Rfm.Api\\Rfm.Api.csproj|c:\\users\\andi\\source\\repos\\routfare\\rfm.api\\rfm.api\\rfm.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{E3050D9D-7720-4D95-ADE8-ADCC5FE29092}|Rfm.Api\\Rfm.Api.csproj|solutionrelative:rfm.api\\rfm.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3050D9D-7720-4D95-ADE8-ADCC5FE29092}|Rfm.Api\\Rfm.Api.csproj|c:\\users\\andi\\source\\repos\\routfare\\rfm.api\\rfm.api\\controllers\\touroperatorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3050D9D-7720-4D95-ADE8-ADCC5FE29092}|Rfm.Api\\Rfm.Api.csproj|solutionrelative:rfm.api\\controllers\\touroperatorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3050D9D-7720-4D95-ADE8-ADCC5FE29092}|Rfm.Api\\Rfm.Api.csproj|c:\\users\\andi\\source\\repos\\routfare\\rfm.api\\rfm.api\\controllers\\routescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3050D9D-7720-4D95-ADE8-ADCC5FE29092}|Rfm.Api\\Rfm.Api.csproj|solutionrelative:rfm.api\\controllers\\routescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3050D9D-7720-4D95-ADE8-ADCC5FE29092}|Rfm.Api\\Rfm.Api.csproj|c:\\users\\andi\\source\\repos\\routfare\\rfm.api\\rfm.api\\controllers\\priceentriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3050D9D-7720-4D95-ADE8-ADCC5FE29092}|Rfm.Api\\Rfm.Api.csproj|solutionrelative:rfm.api\\controllers\\priceentriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3050D9D-7720-4D95-ADE8-ADCC5FE29092}|Rfm.Api\\Rfm.Api.csproj|c:\\users\\andi\\source\\repos\\routfare\\rfm.api\\rfm.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3050D9D-7720-4D95-ADE8-ADCC5FE29092}|Rfm.Api\\Rfm.Api.csproj|solutionrelative:rfm.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3050D9D-7720-4D95-ADE8-ADCC5FE29092}|Rfm.Api\\Rfm.Api.csproj|c:\\users\\andi\\source\\repos\\routfare\\rfm.api\\rfm.api\\infrastructure\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3050D9D-7720-4D95-ADE8-ADCC5FE29092}|Rfm.Api\\Rfm.Api.csproj|solutionrelative:rfm.api\\infrastructure\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3050D9D-7720-4D95-ADE8-ADCC5FE29092}|Rfm.Api\\Rfm.Api.csproj|c:\\users\\andi\\source\\repos\\routfare\\rfm.api\\rfm.api\\models\\dtos\\touroperator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3050D9D-7720-4D95-ADE8-ADCC5FE29092}|Rfm.Api\\Rfm.Api.csproj|solutionrelative:rfm.api\\models\\dtos\\touroperator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3050D9D-7720-4D95-ADE8-ADCC5FE29092}|Rfm.Api\\Rfm.Api.csproj|c:\\users\\andi\\source\\repos\\routfare\\rfm.api\\rfm.api\\models\\dtos\\priceentrydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3050D9D-7720-4D95-ADE8-ADCC5FE29092}|Rfm.Api\\Rfm.Api.csproj|solutionrelative:rfm.api\\models\\dtos\\priceentrydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3050D9D-7720-4D95-ADE8-ADCC5FE29092}|Rfm.Api\\Rfm.Api.csproj|c:\\users\\andi\\source\\repos\\routfare\\rfm.api\\rfm.api\\infrastructure\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3050D9D-7720-4D95-ADE8-ADCC5FE29092}|Rfm.Api\\Rfm.Api.csproj|solutionrelative:rfm.api\\infrastructure\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3050D9D-7720-4D95-ADE8-ADCC5FE29092}|Rfm.Api\\Rfm.Api.csproj|c:\\users\\andi\\source\\repos\\routfare\\rfm.api\\rfm.api\\infrastructure\\seed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3050D9D-7720-4D95-ADE8-ADCC5FE29092}|Rfm.Api\\Rfm.Api.csproj|solutionrelative:rfm.api\\infrastructure\\seed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3050D9D-7720-4D95-ADE8-ADCC5FE29092}|Rfm.Api\\Rfm.Api.csproj|c:\\users\\andi\\source\\repos\\routfare\\rfm.api\\rfm.api\\models\\priceentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3050D9D-7720-4D95-ADE8-ADCC5FE29092}|Rfm.Api\\Rfm.Api.csproj|solutionrelative:rfm.api\\models\\priceentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3050D9D-7720-4D95-ADE8-ADCC5FE29092}|Rfm.Api\\Rfm.Api.csproj|c:\\users\\andi\\source\\repos\\routfare\\rfm.api\\rfm.api\\models\\touroperator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3050D9D-7720-4D95-ADE8-ADCC5FE29092}|Rfm.Api\\Rfm.Api.csproj|solutionrelative:rfm.api\\models\\touroperator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3050D9D-7720-4D95-ADE8-ADCC5FE29092}|Rfm.Api\\Rfm.Api.csproj|c:\\users\\andi\\source\\repos\\routfare\\rfm.api\\rfm.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3050D9D-7720-4D95-ADE8-ADCC5FE29092}|Rfm.Api\\Rfm.Api.csproj|solutionrelative:rfm.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3050D9D-7720-4D95-ADE8-ADCC5FE29092}|Rfm.Api\\Rfm.Api.csproj|c:\\users\\andi\\source\\repos\\routfare\\rfm.api\\rfm.api\\auth\\httpcontextextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3050D9D-7720-4D95-ADE8-ADCC5FE29092}|Rfm.Api\\Rfm.Api.csproj|solutionrelative:rfm.api\\auth\\httpcontextextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Rfm.Api",
+              "DocumentMoniker": "C:\\Users\\andi\\source\\repos\\RoutFare\\Rfm.Api\\Rfm.Api\\Rfm.Api.csproj",
+              "RelativeDocumentMoniker": "Rfm.Api\\Rfm.Api.csproj",
+              "ToolTip": "C:\\Users\\andi\\source\\repos\\RoutFare\\Rfm.Api\\Rfm.Api\\Rfm.Api.csproj",
+              "RelativeToolTip": "Rfm.Api\\Rfm.Api.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-02T20:14:05.618Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\andi\\source\\repos\\RoutFare\\Rfm.Api\\Rfm.Api\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Rfm.Api\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\andi\\source\\repos\\RoutFare\\Rfm.Api\\Rfm.Api\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Rfm.Api\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAswEwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T17:13:12.233Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PriceEntriesController.cs",
+              "DocumentMoniker": "C:\\Users\\andi\\source\\repos\\RoutFare\\Rfm.Api\\Rfm.Api\\Controllers\\PriceEntriesController.cs",
+              "RelativeDocumentMoniker": "Rfm.Api\\Controllers\\PriceEntriesController.cs",
+              "ToolTip": "C:\\Users\\andi\\source\\repos\\RoutFare\\Rfm.Api\\Rfm.Api\\Controllers\\PriceEntriesController.cs",
+              "RelativeToolTip": "Rfm.Api\\Controllers\\PriceEntriesController.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAkwN4AAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T14:16:12.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RoutesController.cs",
+              "DocumentMoniker": "C:\\Users\\andi\\source\\repos\\RoutFare\\Rfm.Api\\Rfm.Api\\Controllers\\RoutesController.cs",
+              "RelativeDocumentMoniker": "Rfm.Api\\Controllers\\RoutesController.cs",
+              "ToolTip": "C:\\Users\\andi\\source\\repos\\RoutFare\\Rfm.Api\\Rfm.Api\\Controllers\\RoutesController.cs",
+              "RelativeToolTip": "Rfm.Api\\Controllers\\RoutesController.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAuwHMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T16:14:02.217Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TourOperatorsController.cs",
+              "DocumentMoniker": "C:\\Users\\andi\\source\\repos\\RoutFare\\Rfm.Api\\Rfm.Api\\Controllers\\TourOperatorsController.cs",
+              "RelativeDocumentMoniker": "Rfm.Api\\Controllers\\TourOperatorsController.cs",
+              "ToolTip": "C:\\Users\\andi\\source\\repos\\RoutFare\\Rfm.Api\\Rfm.Api\\Controllers\\TourOperatorsController.cs",
+              "RelativeToolTip": "Rfm.Api\\Controllers\\TourOperatorsController.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAYwM0AAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T16:35:41.112Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\andi\\source\\repos\\RoutFare\\Rfm.Api\\Rfm.Api\\Infrastructure\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Rfm.Api\\Infrastructure\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\andi\\source\\repos\\RoutFare\\Rfm.Api\\Rfm.Api\\Infrastructure\\AppDbContext.cs",
+              "RelativeToolTip": "Rfm.Api\\Infrastructure\\AppDbContext.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAowC8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T16:55:05.338Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TourOperator.cs",
+              "DocumentMoniker": "C:\\Users\\andi\\source\\repos\\RoutFare\\Rfm.Api\\Rfm.Api\\Models\\Dtos\\TourOperator.cs",
+              "RelativeDocumentMoniker": "Rfm.Api\\Models\\Dtos\\TourOperator.cs",
+              "ToolTip": "C:\\Users\\andi\\source\\repos\\RoutFare\\Rfm.Api\\Rfm.Api\\Models\\Dtos\\TourOperator.cs",
+              "RelativeToolTip": "Rfm.Api\\Models\\Dtos\\TourOperator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T16:34:42.745Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PriceEntryDto.cs",
+              "DocumentMoniker": "C:\\Users\\andi\\source\\repos\\RoutFare\\Rfm.Api\\Rfm.Api\\Models\\Dtos\\PriceEntryDto.cs",
+              "RelativeDocumentMoniker": "Rfm.Api\\Models\\Dtos\\PriceEntryDto.cs",
+              "ToolTip": "C:\\Users\\andi\\source\\repos\\RoutFare\\Rfm.Api\\Rfm.Api\\Models\\Dtos\\PriceEntryDto.cs",
+              "RelativeToolTip": "Rfm.Api\\Models\\Dtos\\PriceEntryDto.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAgwAAAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T14:32:15.754Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AppUser.cs",
+              "DocumentMoniker": "C:\\Users\\andi\\source\\repos\\RoutFare\\Rfm.Api\\Rfm.Api\\Infrastructure\\AppUser.cs",
+              "RelativeDocumentMoniker": "Rfm.Api\\Infrastructure\\AppUser.cs",
+              "ToolTip": "C:\\Users\\andi\\source\\repos\\RoutFare\\Rfm.Api\\Rfm.Api\\Infrastructure\\AppUser.cs",
+              "RelativeToolTip": "Rfm.Api\\Infrastructure\\AppUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T19:43:54.126Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PriceEntry.cs",
+              "DocumentMoniker": "C:\\Users\\andi\\source\\repos\\RoutFare\\Rfm.Api\\Rfm.Api\\Models\\PriceEntry.cs",
+              "RelativeDocumentMoniker": "Rfm.Api\\Models\\PriceEntry.cs",
+              "ToolTip": "C:\\Users\\andi\\source\\repos\\RoutFare\\Rfm.Api\\Rfm.Api\\Models\\PriceEntry.cs",
+              "RelativeToolTip": "Rfm.Api\\Models\\PriceEntry.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T14:36:06.847Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TourOperator.cs",
+              "DocumentMoniker": "C:\\Users\\andi\\source\\repos\\RoutFare\\Rfm.Api\\Rfm.Api\\Models\\TourOperator.cs",
+              "RelativeDocumentMoniker": "Rfm.Api\\Models\\TourOperator.cs",
+              "ToolTip": "C:\\Users\\andi\\source\\repos\\RoutFare\\Rfm.Api\\Rfm.Api\\Models\\TourOperator.cs",
+              "RelativeToolTip": "Rfm.Api\\Models\\TourOperator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T16:34:52.92Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Seed.cs",
+              "DocumentMoniker": "C:\\Users\\andi\\source\\repos\\RoutFare\\Rfm.Api\\Rfm.Api\\Infrastructure\\Seed.cs",
+              "RelativeDocumentMoniker": "Rfm.Api\\Infrastructure\\Seed.cs",
+              "ToolTip": "C:\\Users\\andi\\source\\repos\\RoutFare\\Rfm.Api\\Rfm.Api\\Infrastructure\\Seed.cs",
+              "RelativeToolTip": "Rfm.Api\\Infrastructure\\Seed.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T19:38:49.418Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\andi\\source\\repos\\RoutFare\\Rfm.Api\\Rfm.Api\\Program.cs",
+              "RelativeDocumentMoniker": "Rfm.Api\\Program.cs",
+              "ToolTip": "C:\\Users\\andi\\source\\repos\\RoutFare\\Rfm.Api\\Rfm.Api\\Program.cs",
+              "RelativeToolTip": "Rfm.Api\\Program.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAAwGgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T15:57:29.739Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "HttpContextExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\andi\\source\\repos\\RoutFare\\Rfm.Api\\Rfm.Api\\Auth\\HttpContextExtensions.cs",
+              "RelativeDocumentMoniker": "Rfm.Api\\Auth\\HttpContextExtensions.cs",
+              "ToolTip": "C:\\Users\\andi\\source\\repos\\RoutFare\\Rfm.Api\\Rfm.Api\\Auth\\HttpContextExtensions.cs",
+              "RelativeToolTip": "Rfm.Api\\Auth\\HttpContextExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T14:41:57.725Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -180,4 +180,5 @@ C:\Users\andi\source\repos\RoutFare\Rfm.Api\Rfm.Api\obj\Debug\net8.0\refint\Rfm.
 C:\Users\andi\source\repos\RoutFare\Rfm.Api\Rfm.Api\obj\Debug\net8.0\Rfm.Api.pdb
 C:\Users\andi\source\repos\RoutFare\Rfm.Api\Rfm.Api\obj\Debug\net8.0\Rfm.Api.genruntimeconfig.cache
 C:\Users\andi\source\repos\RoutFare\Rfm.Api\Rfm.Api\obj\Debug\net8.0\ref\Rfm.Api.dll
+C:\Users\andi\source\repos\RoutFare\Rfm.Api\Rfm.Api\obj\Debug\net8.0\Rfm.Api.sourcelink.json
 C:\Users\andi\source\repos\RoutFare\Rfm.Api\Rfm.Api\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

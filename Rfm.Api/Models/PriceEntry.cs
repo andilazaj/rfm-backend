@@ -1,29 +1,40 @@
-﻿using Rfm.Api.Infrastructure;
-using Rfm.Api.Models;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore;
+using Rfm.Api.Infrastructure;
 
-public class PriceEntry
+namespace Rfm.Api.Models
 {
-    public int Id { get; set; }
+    public class PriceEntry
+    {
+        public int Id { get; set; }
 
-    // Foreign Keys
-    public int RouteId { get; set; }
-    public FlightRoute Route { get; set; }
+        // Foreign keys
+        [Required]
+        public int RouteId { get; set; }
+        public FlightRoute? Route { get; set; }
 
-    public int SeasonId { get; set; }
-    public Season Season { get; set; }
+        [Required]
+        public int SeasonId { get; set; }
+        public Season? Season { get; set; }
 
-    public string TourOperatorId { get; set; }
-    public AppUser TourOperator { get; set; }
+        [Required]
+        public string TourOperatorId { get; set; } = default!;
+        public AppUser? TourOperator { get; set; }
 
-    public int BookingClassId { get; set; }
-    public BookingClass BookingClass { get; set; }
+        [Required]
+        public int BookingClassId { get; set; }
+        public BookingClass? BookingClass { get; set; }
 
-    // Pricing Info
-    public DateTime Date { get; set; }
+        // Data
+        [Required]
+        public DateOnly Date { get; set; }   // EF Core 8+ maps this fine to SQLite/SQL Server
 
-    // ✅ Now read-write
-    public string DayOfWeek { get; set; } = string.Empty;
+        [Precision(10, 2)]
+        [Range(0, double.MaxValue)]
+        public decimal Price { get; set; }
 
-    public decimal Price { get; set; }
-    public int SeatCount { get; set; }
+        [Range(0, int.MaxValue)]
+        public int SeatCount { get; set; }
+    }
 }

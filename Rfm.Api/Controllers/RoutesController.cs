@@ -49,6 +49,24 @@ public class RoutesController : ControllerBase
         });
     }
 
+    [HttpGet("{routeId}/booking-classes")]
+    public async Task<IActionResult> GetBookingClassesForRoute(int routeId)
+    {
+        var route = await _db.Routes
+            .Include(r => r.BookingClasses)
+            .FirstOrDefaultAsync(r => r.Id == routeId);
+
+        if (route == null)
+            return NotFound(new { message = "Route not found." });
+
+        var result = route.BookingClasses
+            .Select(b => new { b.Id, b.Name })
+            .ToList();
+
+        return Ok(result);
+    }
+
+
     [HttpGet]
     public async Task<IActionResult> GetAllRoutes()
     {

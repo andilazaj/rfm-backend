@@ -133,51 +133,6 @@ namespace Rfm.Api.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("PriceEntry", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("BookingClassId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<DateTime>("Date")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("DayOfWeek")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<decimal>("Price")
-                        .HasColumnType("TEXT");
-
-                    b.Property<int>("RouteId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("SeasonId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("SeatCount")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("TourOperatorId")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("BookingClassId");
-
-                    b.HasIndex("RouteId");
-
-                    b.HasIndex("SeasonId");
-
-                    b.HasIndex("TourOperatorId");
-
-                    b.ToTable("PriceEntries");
-                });
-
             modelBuilder.Entity("Rfm.Api.Infrastructure.AppRole", b =>
                 {
                     b.Property<string>("Id")
@@ -312,6 +267,48 @@ namespace Rfm.Api.Migrations
                     b.ToTable("Routes");
                 });
 
+            modelBuilder.Entity("Rfm.Api.Models.PriceEntry", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("BookingClassId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateOnly>("Date")
+                        .HasColumnType("TEXT");
+
+                    b.Property<decimal>("Price")
+                        .HasPrecision(10, 2)
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("RouteId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("SeasonId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("SeatCount")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("TourOperatorId")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BookingClassId");
+
+                    b.HasIndex("RouteId");
+
+                    b.HasIndex("SeasonId");
+
+                    b.HasIndex("TourOperatorId");
+
+                    b.ToTable("PriceEntries");
+                });
+
             modelBuilder.Entity("Rfm.Api.Models.Season", b =>
                 {
                     b.Property<int>("Id")
@@ -336,25 +333,6 @@ namespace Rfm.Api.Migrations
                     b.ToTable("Seasons");
                 });
 
-            modelBuilder.Entity("Rfm.Api.Models.TourOperator", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("TourOperators");
-                });
-
             modelBuilder.Entity("Rfm.Api.Models.TourOperatorSeason", b =>
                 {
                     b.Property<int>("TourOperatorId")
@@ -368,6 +346,32 @@ namespace Rfm.Api.Migrations
                     b.HasIndex("SeasonId");
 
                     b.ToTable("TourOperatorSeasons");
+                });
+
+            modelBuilder.Entity("TourOperator", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("IdentityUserId")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("IdentityUserId")
+                        .IsUnique();
+
+                    b.ToTable("TourOperators");
                 });
 
             modelBuilder.Entity("BookingClassFlightRoute", b =>
@@ -436,7 +440,23 @@ namespace Rfm.Api.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("PriceEntry", b =>
+            modelBuilder.Entity("Rfm.Api.Models.BookingClass", b =>
+                {
+                    b.HasOne("TourOperator", null)
+                        .WithMany("BookingClasses")
+                        .HasForeignKey("TourOperatorId");
+                });
+
+            modelBuilder.Entity("Rfm.Api.Models.FlightRoute", b =>
+                {
+                    b.HasOne("Rfm.Api.Models.Season", "Season")
+                        .WithMany()
+                        .HasForeignKey("SeasonId");
+
+                    b.Navigation("Season");
+                });
+
+            modelBuilder.Entity("Rfm.Api.Models.PriceEntry", b =>
                 {
                     b.HasOne("Rfm.Api.Models.BookingClass", "BookingClass")
                         .WithMany()
@@ -471,31 +491,15 @@ namespace Rfm.Api.Migrations
                     b.Navigation("TourOperator");
                 });
 
-            modelBuilder.Entity("Rfm.Api.Models.BookingClass", b =>
-                {
-                    b.HasOne("Rfm.Api.Models.TourOperator", null)
-                        .WithMany("BookingClasses")
-                        .HasForeignKey("TourOperatorId");
-                });
-
-            modelBuilder.Entity("Rfm.Api.Models.FlightRoute", b =>
-                {
-                    b.HasOne("Rfm.Api.Models.Season", "Season")
-                        .WithMany()
-                        .HasForeignKey("SeasonId");
-
-                    b.Navigation("Season");
-                });
-
             modelBuilder.Entity("Rfm.Api.Models.TourOperatorSeason", b =>
                 {
                     b.HasOne("Rfm.Api.Models.Season", "Season")
                         .WithMany("TourOperatorSeasons")
                         .HasForeignKey("SeasonId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("Rfm.Api.Models.TourOperator", "TourOperator")
+                    b.HasOne("TourOperator", "TourOperator")
                         .WithMany("TourOperatorSeasons")
                         .HasForeignKey("TourOperatorId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -506,12 +510,23 @@ namespace Rfm.Api.Migrations
                     b.Navigation("TourOperator");
                 });
 
+            modelBuilder.Entity("TourOperator", b =>
+                {
+                    b.HasOne("Rfm.Api.Infrastructure.AppUser", "User")
+                        .WithOne()
+                        .HasForeignKey("TourOperator", "IdentityUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("Rfm.Api.Models.Season", b =>
                 {
                     b.Navigation("TourOperatorSeasons");
                 });
 
-            modelBuilder.Entity("Rfm.Api.Models.TourOperator", b =>
+            modelBuilder.Entity("TourOperator", b =>
                 {
                     b.Navigation("BookingClasses");
 

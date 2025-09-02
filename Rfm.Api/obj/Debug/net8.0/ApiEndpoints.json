@@ -1,16 +1,52 @@
 [
   {
-    "ContainingType": "PriceEntriesController",
-    "Method": "GetAll",
+    "ContainingType": "Rfm.Api.Controllers.PriceEntriesController",
+    "Method": "Query",
     "RelativePath": "api/PriceEntries",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "operatorId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "routeId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "seasonId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "from",
+        "Type": "System.Nullable\u00601[[System.DateOnly, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "to",
+        "Type": "System.Nullable\u00601[[System.DateOnly, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "PriceEntriesController",
+    "ContainingType": "Rfm.Api.Controllers.PriceEntriesController",
     "Method": "Create",
     "RelativePath": "api/PriceEntries",
     "HttpMethod": "POST",
@@ -18,15 +54,15 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "entry",
-        "Type": "PriceEntry",
+        "Name": "dto",
+        "Type": "Rfm.Api.Dtos.PriceEntryCreateDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "PriceEntriesController",
+    "ContainingType": "Rfm.Api.Controllers.PriceEntriesController",
     "Method": "GetById",
     "RelativePath": "api/PriceEntries/{id}",
     "HttpMethod": "GET",
@@ -42,7 +78,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "PriceEntriesController",
+    "ContainingType": "Rfm.Api.Controllers.PriceEntriesController",
     "Method": "Update",
     "RelativePath": "api/PriceEntries/{id}",
     "HttpMethod": "PUT",
@@ -55,15 +91,15 @@
         "IsRequired": true
       },
       {
-        "Name": "updated",
-        "Type": "PriceEntry",
+        "Name": "dto",
+        "Type": "Rfm.Api.Dtos.PriceEntryCreateDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "PriceEntriesController",
+    "ContainingType": "Rfm.Api.Controllers.PriceEntriesController",
     "Method": "Delete",
     "RelativePath": "api/PriceEntries/{id}",
     "HttpMethod": "DELETE",
@@ -79,16 +115,16 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "PriceEntriesController",
-    "Method": "GetByOperator",
-    "RelativePath": "api/PriceEntries/operator/{operatorId}",
-    "HttpMethod": "GET",
+    "ContainingType": "Rfm.Api.Controllers.PriceEntriesController",
+    "Method": "BulkUpsert",
+    "RelativePath": "api/PriceEntries/bulk-upsert",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "operatorId",
-        "Type": "System.String",
+        "Name": "rows",
+        "Type": "System.Collections.Generic.List\u00601[[Rfm.Api.Dtos.PriceEntryUpsertDto, Rfm.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "IsRequired": true
       }
     ],
@@ -151,6 +187,22 @@
     "Parameters": [
       {
         "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Rfm.Api.Controllers.RoutesController",
+    "Method": "GetBookingClassesForRoute",
+    "RelativePath": "api/routes/{routeId}/booking-classes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "routeId",
         "Type": "System.Int32",
         "IsRequired": true
       }

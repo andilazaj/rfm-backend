@@ -4,12 +4,14 @@ using System.Text;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.EntityFrameworkCore;
 using Rfm.Api.Infrastructure;
+using Rfm.Api.Models;
 
 namespace Rfm.Api.Controllers;
 
 public record LoginRequest(string Email, string Password);
-public record LoginResponse(string Email, string Role, string Token);
+public record LoginResponse(string Email, string Role, string Token, string UserId, int? OperatorId);
 public record RegisterRequest(string Email, string Password, string Role);
 
 [ApiController]
@@ -19,15 +21,18 @@ public class AuthController : ControllerBase
     private readonly UserManager<AppUser> _userManager;
     private readonly RoleManager<AppRole> _roleManager;
     private readonly IConfiguration _config;
+    private readonly AppDbContext _context;
 
     public AuthController(
         UserManager<AppUser> userManager,
         RoleManager<AppRole> roleManager,
-        IConfiguration config)
+        IConfiguration config,
+        AppDbContext context)
     {
         _userManager = userManager;
         _roleManager = roleManager;
         _config = config;
+        _context = context;
     }
 
     [HttpPost("register")]
@@ -54,7 +59,6 @@ public class AuthController : ControllerBase
         await _userManager.AddToRoleAsync(user, req.Role);
 
         return Ok(new { message = "User registered successfully." });
-
     }
 
     [HttpPost("login")]
@@ -66,6 +70,16 @@ public class AuthController : ControllerBase
 
         var roles = await _userManager.GetRolesAsync(user);
         var role = roles.FirstOrDefault() ?? "Operator";
+
+       
+        int? operatorId = null;
+        if (role == "Operator")
+        {
+            operatorId = await _context.TourOperators
+                .Where(o => o.IdentityUserId == user.Id)
+                .Select(o => (int?)o.Id)
+                .FirstOrDefaultAsync();
+        }
 
         var claims = new[]
         {
@@ -83,6 +97,12 @@ public class AuthController : ControllerBase
             signingCredentials: creds
         );
 
-        return new LoginResponse(user.Email!, role, new JwtSecurityTokenHandler().WriteToken(token));
+        return new LoginResponse(
+            Email: user.Email!,
+            Role: role,
+            Token: new JwtSecurityTokenHandler().WriteToken(token),
+            UserId: user.Id,
+            OperatorId: operatorId
+        );
     }
 }
