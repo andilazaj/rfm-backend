@@ -16,7 +16,10 @@ builder.Services.AddCors(options =>
     options.AddPolicy(name: MyAllowSpecificOrigins, policy =>
     {
         policy
-            .WithOrigins("http://localhost:4200")
+            .WithOrigins(
+                "http://localhost:4200",
+                "https://rfm-frontend-flame.vercel.app"
+            )
             .AllowAnyHeader()
             .AllowAnyMethod();
     });
