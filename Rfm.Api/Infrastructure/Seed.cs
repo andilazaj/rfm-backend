@@ -15,7 +15,7 @@ public class Seed
 
         await db.Database.MigrateAsync();
 
-       
+     
         foreach (var roleName in new[] { "Admin", "Operator" })
         {
             if (!await roleManager.RoleExistsAsync(roleName))
@@ -28,7 +28,7 @@ public class Seed
             }
         }
 
-        
+
         if (!await db.BookingClasses.AnyAsync())
         {
             db.BookingClasses.AddRange(
@@ -38,56 +38,53 @@ public class Seed
             await db.SaveChangesAsync();
         }
 
-        
+       
         var adminEmail = "admin@rfm.com";
-        var adminPassword = "Admin123$";
-
+        var adminPass = "Admin123$";
         var adminUser = await userManager.FindByEmailAsync(adminEmail);
         if (adminUser == null)
         {
-            adminUser = new AppUser
-            {
-                UserName = adminEmail,
-                Email = adminEmail,
-                EmailConfirmed = true
-            };
+            adminUser = new AppUser { UserName = adminEmail, Email = adminEmail, EmailConfirmed = true };
+            var res = await userManager.CreateAsync(adminUser, adminPass);
+            if (!res.Succeeded) throw new Exception("Failed to create default admin: " + string.Join(", ", res.Errors.Select(e => e.Description)));
+            await userManager.AddToRoleAsync(adminUser, "Admin");
+        }
 
-            var result = await userManager.CreateAsync(adminUser, adminPassword);
-            if (result.Succeeded)
-            {
-                await userManager.AddToRoleAsync(adminUser, "Admin");
-            }
-            else
-            {
-                throw new Exception("Failed to create default admin: " +
-                                    string.Join(", ", result.Errors.Select(e => e.Description)));
-            }
+        
+        var opEmail = "operator@gmail.com";
+        var opPass = "Operator@123";
+        var opUser = await userManager.FindByEmailAsync(opEmail);
+        if (opUser == null)
+        {
+            opUser = new AppUser { UserName = opEmail, Email = opEmail, EmailConfirmed = true };
+            var res = await userManager.CreateAsync(opUser, opPass);
+            if (!res.Succeeded) throw new Exception("Failed to create default operator: " + string.Join(", ", res.Errors.Select(e => e.Description)));
+            await userManager.AddToRoleAsync(opUser, "Operator");
         }
 
        
-        var operatorEmail = "operator@gmail.com";
-        var operatorPassword = "Operator@123";
-
-        var operatorUser = await userManager.FindByEmailAsync(operatorEmail);
-        if (operatorUser == null)
+        var hasTO = await db.TourOperators.AnyAsync(to => to.IdentityUserId == opUser.Id);
+        if (!hasTO)
         {
-            operatorUser = new AppUser
+            var economy = await db.BookingClasses.FirstAsync(b => b.Name == "Economy");
+            var anySeason = await db.Seasons.FirstOrDefaultAsync(); 
+
+            var to = new TourOperator
             {
-                UserName = operatorEmail,
-                Email = operatorEmail,
-                EmailConfirmed = true
+                Name = "Demo Operator",
+                Email = opEmail,
+                IdentityUserId = opUser.Id,
+                BookingClasses = new List<BookingClass> { economy },
+                TourOperatorSeasons = new List<TourOperatorSeason>()
             };
 
-            var result = await userManager.CreateAsync(operatorUser, operatorPassword);
-            if (result.Succeeded)
+            if (anySeason != null)
             {
-                await userManager.AddToRoleAsync(operatorUser, "Operator");
+                to.TourOperatorSeasons.Add(new TourOperatorSeason { SeasonId = anySeason.Id });
             }
-            else
-            {
-                throw new Exception("Failed to create default operator: " +
-                                    string.Join(", ", result.Errors.Select(e => e.Description)));
-            }
+
+            db.TourOperators.Add(to);
+            await db.SaveChangesAsync();
         }
     }
 }
