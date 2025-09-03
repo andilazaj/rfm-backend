@@ -15,6 +15,7 @@ public class Seed
 
         await db.Database.MigrateAsync();
 
+       
         foreach (var roleName in new[] { "Admin", "Operator" })
         {
             if (!await roleManager.RoleExistsAsync(roleName))
@@ -27,6 +28,7 @@ public class Seed
             }
         }
 
+        
         if (!await db.BookingClasses.AnyAsync())
         {
             db.BookingClasses.AddRange(
@@ -36,6 +38,7 @@ public class Seed
             await db.SaveChangesAsync();
         }
 
+        
         var adminEmail = "admin@rfm.com";
         var adminPassword = "Admin123$";
 
@@ -57,6 +60,32 @@ public class Seed
             else
             {
                 throw new Exception("Failed to create default admin: " +
+                                    string.Join(", ", result.Errors.Select(e => e.Description)));
+            }
+        }
+
+       
+        var operatorEmail = "operator@gmail.com";
+        var operatorPassword = "Operator@123";
+
+        var operatorUser = await userManager.FindByEmailAsync(operatorEmail);
+        if (operatorUser == null)
+        {
+            operatorUser = new AppUser
+            {
+                UserName = operatorEmail,
+                Email = operatorEmail,
+                EmailConfirmed = true
+            };
+
+            var result = await userManager.CreateAsync(operatorUser, operatorPassword);
+            if (result.Succeeded)
+            {
+                await userManager.AddToRoleAsync(operatorUser, "Operator");
+            }
+            else
+            {
+                throw new Exception("Failed to create default operator: " +
                                     string.Join(", ", result.Errors.Select(e => e.Description)));
             }
         }
